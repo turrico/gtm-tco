@@ -10,10 +10,13 @@
 
 // Helper: Safety wrapper for producer ID
 function gtm_get_producer_name($product_id) {
+    // Debug: Temporarily disabled to rule out crashes
+    /*
     if (function_exists('get_associated_productor_id')) {
         $producer_id = get_associated_productor_id($product_id);
         return get_the_title($producer_id);
     }
+    */
     return 'Unknown';
 }
 

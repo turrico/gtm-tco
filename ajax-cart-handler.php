@@ -26,10 +26,12 @@ function obdc_gtm_get_cart_content() {
         
         // Handle producer logic safely
         $producer = 'Unknown';
+        /*
         if (function_exists('get_associated_productor_id')) {
             $producer_id = get_associated_productor_id($product->get_id());
             $producer = esc_attr(get_the_title($producer_id));
         }
+        */
 
         // Get category
         $categories = get_the_terms($product->get_id(), 'product_cat');

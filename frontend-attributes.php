@@ -13,10 +13,12 @@ function gtm_customize_add_to_cart_attributes($html, $product) {
     $product_price = $product->get_price();
     
     $producer_name = 'Unknown';
+    /*
     if (function_exists('get_associated_productor_id')) {
         $producer_id = get_associated_productor_id($product->get_id());
         $producer_name = get_the_title($producer_id);
     }
+    */
 
     // Get product category
     $categories = get_the_terms($product->get_id(), 'product_cat');

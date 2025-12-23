@@ -25,11 +25,11 @@ require_once plugin_dir_path(__FILE__) . 'frontend-attributes.php';
  * ==================================================
  */
 
-// 2. Inject GTM Container in Head (Priority 1 = Top of Head)
+// 2. Inject GTM Container in Head (Priority 10)
 add_action('wp_head', function() {
     ?>
     <!-- Implement Data Layer -->
-    <?php echo do_shortcode("[datalayer_output]"); ?>
+    <?php echo obdc_gtm_datalayer_output_shortcode(); ?>
     <!-- End Implement Data Layer --> 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -39,7 +39,7 @@ add_action('wp_head', function() {
     })(window,document,'script','dataLayer','GTM-WM6NPSN');</script>
     <!-- End Google Tag Manager -->
     <?php
-}, 1);
+}, 10);
 
 // 3. Inject NoScript Body in Footer
 add_action('wp_footer', function() {
