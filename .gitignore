@@ -1,0 +1,17 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+debug.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# WordPress Specific (Just in case you run this in a full env later)
+node_modules/
+vendor/
