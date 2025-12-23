@@ -12,7 +12,7 @@ function fetchCartItems(eventType) {
         jQuery.ajax({
             type: "POST",
             url: MyAjax.ajaxurl,
-            data: { action: "get_cart_content" },
+            data: { action: "obdc_gtm_get_cart_content" },
             success: function (response) {
                 if(response.success) {
                     window.dataLayer = window.dataLayer || [];

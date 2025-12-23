@@ -5,10 +5,10 @@
  * Returns current cart items and total for GTM events.
  */
 
-add_action("wp_ajax_get_cart_content", "get_cart_content");
-add_action("wp_ajax_nopriv_get_cart_content", "get_cart_content");
+add_action("wp_ajax_obdc_gtm_get_cart_content", "obdc_gtm_get_cart_content");
+add_action("wp_ajax_nopriv_obdc_gtm_get_cart_content", "obdc_gtm_get_cart_content");
 
-function get_cart_content() {
+function obdc_gtm_get_cart_content() {
     if (!function_exists('WC')) {
         wp_send_json_error(['message' => 'WooCommerce not found.']);
         return;
